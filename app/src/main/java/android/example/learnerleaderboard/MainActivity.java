@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import android.content.Intent;
 import android.example.learnerleaderboard.databinding.ActivityMainBinding;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -24,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         initializeTabs();
+
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SubmissionActivity.class));
+
+            }
+        });
     }
 
     private void initializeTabs(){
