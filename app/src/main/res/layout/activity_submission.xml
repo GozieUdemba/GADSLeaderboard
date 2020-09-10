@@ -37,6 +37,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView"
                 tools:layout_editor_absoluteX="126dp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#EA6F48"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toBottomOf="@id/textView3"/>
 
             <EditText
                 android:id="@+id/editText"
